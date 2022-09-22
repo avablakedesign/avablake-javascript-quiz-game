@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css" /> 
+        <title>Document</title>
+    </head>
+    <header>
+        <h1>Quiz</h1>
+        <h2 id="quizTitles"></h2>
+    </header>
+    <body>
+        <div class="wrapper">
+            <div id="questionBox" class="question">
+                <p>Example Question?</p>
+            </div>
+            <div class="container">
+                <button id="startBtn">Start Quiz</button>
+                <!--<button id="btnAnswer">Answer 1</button>-->
+                <p id="countDown"></p>
+            </div> 
+            <div class="choices">
+                <ul id="ul">
+                    <li id="choiceOne"></li>
+                    <li id="choiceTwo"></li>
+                    <li id="choiceThree"></li>
+                    <li id="choiceFour"></li>
+                </ul>
+            </div> 
+            <div class="highScore">
+                <div class="next">
+                    <button id="btnNextQuestion" type="button">
+                        <p>Next</p>
+                    </button>
+                </div>
+                <div class="highScoreChart">
+                    <p>Score:<span id="highScoreNum">0</span></p>
+            </div>  
+        </div> 
+        <script src="./script.js"></script>       
+    </body>
+    <footer>
+    </footer>
+</html>

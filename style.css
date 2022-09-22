@@ -1,0 +1,103 @@
+:root {
+    --magenta: #ff00ff;
+    --bluepurple: #303060;
+    --darkpurple: #181848;
+    --lightpurple:#7c40ff;
+}
+body{
+    background-image: url("https://avablakedesign.github.io/black-water.png");
+    background-color: var(--bluepurple);
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    height: 400px;
+    width: 600px;
+    background-color: var(--darkpurple);
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.wrapper .question {
+    background-color:var(--bluepurple);
+    color: white;
+    border-radius: 8px;
+    min-height: 50px;
+    font-size: 25px;
+    width: 100%;
+    float: left;
+    padding: 15px;
+}
+
+.wrapper .choices {
+    float: left;
+    width: 100%;
+}
+
+.wrapper .choices ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0%;
+}
+
+.wrapper .choices ul li {
+    display: inline-block;
+    background-color: aqua;
+    color: wheat;
+    margin-bottom: 30px;
+    width: 50%;
+    box-shadow: 0px 3px 0px black;
+    cursor: pointer;
+    padding: 15px;
+    margin: 10px;
+}
+
+.wrapper .choices ul li.correctAnswer {
+    background-color: greenyellow;
+    box-shadow: 0px 3px 0px black;
+}
+
+.wrapper. .choices ul li.wrongAnswers {
+    background-color: red;
+    box-shadow: 0px 3px 0px black;
+}
+
+.wrapper .choices ul li:active{
+    box-shadow: 0px 0px 0px rgb(84, 110, 179);
+}
+
+.wrapper.highScore {
+    float: left;
+    width: 100%;
+}
+
+.wrapper .highScore .next button {
+    background-color:var(--lightpurple);
+    color: white;
+    border-radius: 8px;
+    border: none;
+    padding 10px 70px;
+}
+
+.wrapper .highScore .highScoreChart{
+    width: 50%;
+    font-size: 20px;
+    line-height: 40px;
+    float: left;
+    color: white;
+}
+
+.wrapper .highScore .highScoreChart span{
+    background-color:cornflowerblue;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 5px 20px;
+}
