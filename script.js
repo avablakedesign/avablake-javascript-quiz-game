@@ -147,7 +147,7 @@ const createTimer = () => {
             gameOverState()
             return;
         }
-    }, 100);
+    }, 1000);
 
     return myInterval;
 }
