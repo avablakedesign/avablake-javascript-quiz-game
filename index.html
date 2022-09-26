@@ -5,39 +5,45 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./style.css" /> 
-        <title>Document</title>
+        <title>Quiz Game</title>
     </head>
     <header>
-        <h1>Quiz</h1>
-        <h2 id="quizTitles"></h2>
+        <h1>Javascript Quiz Game</h1>
+        <h2 id="quizTitles"></h2> 
     </header>
     <body>
         <div class="wrapper">
-            <div id="questionBox" class="question">
-                <p>Example Question?</p>
-            </div>
-            <div class="container">
+           <div class="container">
                 <button id="startBtn">Start Quiz</button>
-                <!--<button id="btnAnswer">Answer 1</button>-->
                 <p id="countDown"></p>
-            </div> 
-            <div class="choices">
-                <ul id="ul">
-                    <li id="choiceOne"></li>
-                    <li id="choiceTwo"></li>
-                    <li id="choiceThree"></li>
-                    <li id="choiceFour"></li>
-                </ul>
-            </div> 
-            <div class="highScore">
-                <div class="next">
-                    <button id="btnNextQuestion" type="button">
-                        <p>Next</p>
-                    </button>
+           </div>
+            <div id="quizContainer" style="display: none;">
+                <div class="question-number">
+                    <h3> Question <span class="question-num-value"></span> of
+                        <span class="totalQuestions"></span>
+                    </h3>
                 </div>
-                <div class="highScoreChart">
-                    <p>Score:<span id="highScoreNum">0</span></p>
-            </div>  
+                <div class="question">
+                    <p id="questionText">Click to start the Quiz!</p>
+                </div> 
+                <div class="rightWrong"></div>
+                <br />
+                <div class="choices" id="quizChoices">   
+                    <button id="0" class="quizChoice choices"></button>
+                    <button id="1" class="quizChoice choices"></button>
+                    <button id="2" class="quizChoice choices"></button>
+                    <button id="3" class="quizChoice choices"></button>
+                </div>   
+            <div class="btnOne">
+                <br />
+                <button type= "button" class="btnOne" id="nextBtn">Next</button>
+            </div>
+                <div class="highScore">
+                    <div class="highScoreChart">
+                        <h2>Player:<div id="highScoreName"></div></h2>
+                        <h2>Highscore:<div id="highScoreNum"></div></h2>
+                </div>
+            </div>
         </div> 
         <script src="./script.js"></script>       
     </body>
