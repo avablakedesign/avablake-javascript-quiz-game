@@ -1,7 +1,7 @@
-# Ava Blake's Javascript Quiz Game
+# Ava Blake's JavaScript Quiz Game
 
 ## Description
-This is a Javascript Quiz Game that I created to help others learn Javascript.
+This is a JavaScript Quiz Game that I created to help others learn JavaScript.
 
 ## Installation
 N/A
@@ -13,7 +13,7 @@ This is only for use by Ava Blake Design.
 ![An image of the Quiz Game](./screenshot.png)
 
 ## Website
-<a href="https://avablakedesign.github.io/avablake-javascript-quiz-game">Javascript Quiz Game</a>
+<a href="https://avablakedesign.github.io/avablake-javascript-quiz-game">JavaScript Quiz Game</a>
 
 ## Credits
 N/A
