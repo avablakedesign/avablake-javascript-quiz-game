@@ -36,17 +36,20 @@ const quizQuestions = [
         questionText: "How do you write a Javascript function?",
         answerChoices : [
             {
-                text: "Using square brackets"
+                text: "Using square brackets",
+                isCorrect: false
             },
             {
-                text: "Using tensors"
+                text: "Using tensors",
+                isCorrect: false
             },
             {
                 text: "Using the function keyword",
                 isCorrect: true
             },
             {
-                text: "Using backslashes"
+                text: "Using backslashes",
+                isCorrect: false
             }
         ]
     },
@@ -54,17 +57,20 @@ const quizQuestions = [
         questionText: "Which of these is NOT a data type in Javascript",
         answerChoices: [
             {
-                text: "String"
+                text: "String",
+                isCorrect: false
             },
             {
                 text: "Vector",
                 isCorrect: true
             },
             {
-                text: "Object"
+                text: "Object",
+                isCorrect: false
             },
             {
-                text: "Symbol"
+                text: "Symbol",
+                isCorrect: false
             }
         ]
     },
@@ -72,17 +78,20 @@ const quizQuestions = [
         questionText: "Inside which do we put the Javascript?",
         answerChoices: [
             {
-                text: "<scripting>"
+                text: "<scripting>",
+                isCorrect: false
             },
             {
                 text: "<script>",
                 isCorrect: true
             },
             {
-                text: "<js>"
+                text: "<js>",
+                isCorrect: false
             },
             {
-                text: "<javascript>"
+                text: "<javascript>",
+                isCorrect: false
             }
         ]
     },
@@ -94,13 +103,16 @@ const quizQuestions = [
                 isCorrect: true
             },
             {
-                text: 'alertBox("Hello World");'
+                text: 'alertBox("Hello World");',
+                isCorrect: false
             },
             {
-                text: 'msgBox("Hello World");'
+                text: 'msgBox("Hello World");',
+                isCorrect: false
             },
             {
-                text : 'msg("Hello World");'
+                text : 'msg("Hello World");',
+                isCorrect: false
             }
         ]
     },
@@ -108,13 +120,16 @@ const quizQuestions = [
         questionText: "How do you write an IF Statement in Javascript?",
         answerChoices: [
             {
-                text: "if i = 5"
+                text: "if i = 5",
+                isCorrect: false
             },
             {
-                text: "if i = 5 then"
+                text: "if i = 5 then",
+                isCorrect : false
             },
             {
-                text: "if i == 5 then"
+                text: "if i == 5 then",
+                isCorrect: false
             },
             {
                 text: "if (i == 5)",
@@ -122,7 +137,7 @@ const quizQuestions = [
             }
         ]
     }
-]
+];
 
 //This formats the time into minutes and seconds and displays it as such.
 const timeFormat = (timeSeconds) => {
@@ -215,21 +230,21 @@ const renderQuizQuestions = () => {
     totalQuestions.textContent = quizQuestions.length;
 //This adds points if correct and decrements time if wrong. It also makes the buttons clickable.
     Array.from(quizChoices.children).forEach((choices, i) => {
+        console.log(choices);
         choices.textContent = quizQuestions[0].answerChoices[i].text;
         choices.addEventListener("click", (e) => {
-            if(quizQuestions[0].answerChoices[i].isCorrect) {
+            if(quizQuestions[quizState.questionNum].answerChoices[i].isCorrect == true) {
                 rightWrong.textContent = "😍 Right!";
                 document.getElementById("highScoreNum").textContent = highScore += 50;
                 localStorage.setItem("highScore", JSON.stringify(highScore));
                 choices.disabled = true;
-            
-        }   else {
-                quizState.time = {...quizState.time, seconds: quizState.time.seconds - 10}
-                rightWrong.textContent = "❌ Wrong";
-            }
-        })
-    })
-}
+            }   else {
+                    quizState.time = {...quizState.time, seconds: quizState.time.seconds - 10}
+                    rightWrong.textContent = "❌ Wrong";
+                }
+        });
+    });
+};
 //This is the start button that begins the timer, renders the questions and stats and then removes itself to have the game work.
 startBtn.addEventListener("click", function startBtnGo () {
     if (!quizState.isStarted) {
